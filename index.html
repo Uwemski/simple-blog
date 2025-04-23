@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button>Reset</button>
+  </div>
+
+
+  <script>
+    //const x =  document.getElementById('wrapper')
+    window.onLoad = function(){
+      let storedColored = JSON.parse(localStorage.getItem("defaultColor"))
+      if(storedColored == null || storedColored == undefined){
+        let defaultColor = {
+          backgroundColor: "blue",
+          Color: "white"
+        }
+
+      document.body.style.backgroundColor = defaultColor("backgroundColor")
+      document.body.style.color = defaultColor['Color']
+      }
+      
+    }
+
+    let red =  document.getElementById('red')
+    red.addEventListener("click", function(){
+      let storedColored =  localStorage.getItem("StoredColored")
+
+      if(!storedColored){
+        // colorRed ==
+      }
+    })
+  </script>
+</body>
+</html>
